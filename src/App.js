@@ -27,20 +27,13 @@ export default function App() {
       );
   }, []);
 
-  // image={data}
   return (
     <>
       <div className="container">
         <div className="row">
           {image.map((data) => (
-            // console.log(myList)
             <ImageCard key={data.id} image={data} />
           ))}
-          {/* 
-          {image.map((data) => {
-            console.log(data);
-            <ImageCard key={data.id}  />;
-          })} */}
         </div>
       </div>
     </>
