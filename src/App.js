@@ -16,8 +16,7 @@ export default function App() {
         (result) => {
           // console.log(result);
           setImage(result.hits); // HERE IS ARRAY OF DATA STORE && Chk Also Console
-          // setIsLoaded(true);
-          // setItems(result);
+          setIsLoading(false);
         },
 
         (error) => {
@@ -29,14 +28,17 @@ export default function App() {
 
   return (
     <>
-      {/* isLoading */}
-      <div className="container">
-        <div className="row">
-          {image.map((data) => (
-            <ImageCard key={data.id} image={data} />
-          ))}
+      {isLoading ? (
+        <h1> Load...</h1>
+      ) : (
+        <div className="container">
+          <div className="row">
+            {image.map((data) => (
+              <ImageCard key={data.id} image={data} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
