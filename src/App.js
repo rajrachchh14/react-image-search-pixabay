@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ImageCard from './ImageCard';
 // REACT_API_PIXAL_KEY
 export default function App() {
@@ -7,9 +7,22 @@ export default function App() {
   const [term, setTerm] = useState('');
 
   useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `You clicked ${count} times`;
-  });
+    const url = `https://pixabay.com/api/?key=23664585-b63ea49e0412f4d30e9b28cc8&q=yellow+flowers&image_type=photo&pretty=true`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+        },
+
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
 
   return (
     <>
