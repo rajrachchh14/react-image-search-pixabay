@@ -7,19 +7,19 @@ export default function App() {
   const [term, setTerm] = useState('');
 
   useEffect(() => {
-    const url = `https://pixabay.com/api/?key=23664585-b63ea49e0412f4d30e9b28cc8&q=yellow+flowers&image_type=photo&pretty=true`;
+    const url = `https://pixabay.com/api/?key=${REACT_API_PIXAL_KEY}&q=yellow+flowers&image_type=photo&pretty=true`;
 
     fetch(url)
       .then((res) => res.json())
       .then(
         (result) => {
-          setIsLoaded(true);
-          setItems(result);
+          // setIsLoaded(true);
+          // setItems(result);
         },
 
         (error) => {
-          setIsLoaded(true);
-          setError(error);
+          // setIsLoaded(true);
+          //   setError(error);
         }
       );
   }, []);
