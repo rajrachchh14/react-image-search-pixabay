@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ImageCard from './ImageCard';
+import ImageSearch from './ImageSearch';
 // REACT_API_PIXAL_KEY
 export default function App() {
   const [image, setImage] = useState([]);
@@ -28,6 +29,8 @@ export default function App() {
 
   return (
     <>
+      <ImageSearch />
+
       {isLoading ? (
         <h1> Load...</h1>
       ) : (
