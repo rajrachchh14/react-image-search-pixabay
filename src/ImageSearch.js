@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ImageSearch(para) {
+export default function ImageSearch({ searchText }) {
   const [text, setText] = useState();
   const onSubmit = (e) => {
     e.preventDefault();
