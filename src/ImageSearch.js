@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-export default function ImageSearch() {
+export default function ImageSearch(para) {
   const [search, setSearch] = useState();
+  const onSubmit = (e) => {
+    e.preventDefault();
+    para(search);
+  };
   return (
     <>
       <form onSubmit={onSubmit}>

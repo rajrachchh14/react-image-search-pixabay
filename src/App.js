@@ -21,15 +21,15 @@ export default function App() {
         },
 
         (error) => {
-          // setIsLoaded(true);
-          //   setError(error);
+          // setIsLoading(true);
+          // setError(error);
         }
       );
-  }, []);
+  }, [term]);
 
   return (
     <>
-      <ImageSearch />
+      <ImageSearch para={(search) => setTerm(search)} />
 
       {isLoading ? (
         <h1> Load...</h1>
