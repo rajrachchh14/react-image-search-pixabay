@@ -34,7 +34,7 @@ export default function App() {
         <div className="row">
           {image.map((myList) => (
             // console.log(myList)
-            <ImageCard />
+            <ImageCard key={myList.id} />
           ))}
           {/* 
           {image.map((data) => {
