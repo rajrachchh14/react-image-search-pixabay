@@ -5,11 +5,11 @@ import ImageSearch from './ImageSearch';
 export default function App() {
   const [image, setImage] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [term, setTerm] = useState('');
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const key = '23664585-b63ea49e0412f4d30e9b28cc8';
-    const url = `https://pixabay.com/api/?key=${key}&q=${term}&image_type=photo&pretty=true`;
+    const url = `https://pixabay.com/api/?key=${key}&q=${search}&image_type=photo&pretty=true`;
     // console.log(url);
     fetch(url)
       .then((response) => response.json())
@@ -25,11 +25,11 @@ export default function App() {
           // setError(error);
         }
       );
-  }, [term]);
+  }, [search]);
 
   return (
     <>
-      <ImageSearch searchText={(text) => setTerm(text)} />
+      <ImageSearch searcHook={(text) => setSearch(text)} />
       {isLoading ? (
         <h1> Load...</h1>
       ) : (
