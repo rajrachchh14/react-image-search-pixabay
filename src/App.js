@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ImageCard from './ImageCard';
 // REACT_API_PIXAL_KEY
 export default function App() {
-  const [img, setImage] = useState([]);
+  const [image, setImage] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState('');
 
@@ -27,11 +27,20 @@ export default function App() {
       );
   }, []);
 
+  // image={data}
   return (
     <>
       <div className="container">
         <div className="row">
-          <ImageCard />
+          {image.map((myList) => (
+            // console.log(myList)
+            <ImageCard />
+          ))}
+          {/* 
+          {image.map((data) => {
+            console.log(data);
+            <ImageCard key={data.id} />;
+          })} */}
         </div>
       </div>
     </>
