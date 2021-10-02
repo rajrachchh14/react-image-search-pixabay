@@ -4,7 +4,7 @@ export default function ImageCard(image) {
   const photo = image.image.webformatURL;
   const user = image.image.user;
   const downloads = image.image.downloads;
-  const [t1, t2, t3] = image.image.tags.split(','); // ARRAY Destruture in 3 tags
+  const [t1, t2, t3] = image.image.tags.split(','); // ARRAY Destruture in 3 tags & Split Data in ARRAY
 
   return (
     <>
