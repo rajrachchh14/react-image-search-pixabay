@@ -34,12 +34,12 @@ export default function App() {
         <div className="row">
           {image.map((data) => (
             // console.log(myList)
-            <ImageCard key={data.id} />
+            <ImageCard key={data.id} image={data} />
           ))}
           {/* 
           {image.map((data) => {
             console.log(data);
-            <ImageCard key={data.id} />;
+            <ImageCard key={data.id}  />;
           })} */}
         </div>
       </div>
