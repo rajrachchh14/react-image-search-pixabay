@@ -29,6 +29,7 @@ export default function App() {
 
   return (
     <>
+      {/* isLoading */}
       <div className="container">
         <div className="row">
           {image.map((data) => (
