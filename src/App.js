@@ -29,8 +29,7 @@ export default function App() {
 
   return (
     <>
-      <ImageSearch para={(search) => setTerm(search)} />
-
+      <ImageSearch searchText={(text) => setTerm(text)} />
       {isLoading ? (
         <h1> Load...</h1>
       ) : (

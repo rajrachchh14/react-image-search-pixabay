@@ -4,7 +4,7 @@ export default function ImageSearch(para) {
   const [text, setText] = useState();
   const onSubmit = (e) => {
     e.preventDefault();
-    para(search);
+    searchText(text);
   };
   return (
     <>
