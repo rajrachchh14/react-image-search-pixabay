@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function ImageSearch(para) {
-  const [search, setSearch] = useState();
+  const [text, setText] = useState();
   const onSubmit = (e) => {
     e.preventDefault();
     para(search);
@@ -17,8 +17,8 @@ export default function ImageSearch(para) {
                   type="text"
                   className="form-control"
                   placeholder="Search Image"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
                 />
               </label>
             </div>
