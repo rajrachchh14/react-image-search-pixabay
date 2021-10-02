@@ -30,9 +30,8 @@ export default function App() {
   return (
     <>
       <p className="text-center">
-        {' '}
         Note:panding :: pagination , per page filter droupdown 10,20.. ,per
-        image loader{' '}
+        image loader
       </p>
       <ImageSearch searchHook={(text) => setSearch(text)} />
       {!isLoading && image.length === 0 && (
