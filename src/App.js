@@ -7,8 +7,8 @@ export default function App() {
   const [term, setTerm] = useState('');
 
   useEffect(() => {
-    const url = `https://pixabay.com/api/?key=REACT_API_PIXAL_KEY&q=yellow+flowers&image_type=photo&pretty=true`;
-
+    const url = `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXAL_KEY}&q=yellow+flowers&image_type=photo&pretty=true`;
+    console.log(process.env.REACT_APP_PIXAL_KEY);
     fetch(url)
       .then((res) => res.json())
       .then(
