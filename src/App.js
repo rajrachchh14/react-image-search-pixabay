@@ -9,7 +9,7 @@ export default function App() {
 
   useEffect(() => {
     const key = '23664585-b63ea49e0412f4d30e9b28cc8';
-    const url = `https://pixabay.com/api/?key=${key}&q=${term}+flowers&image_type=photo&pretty=true`;
+    const url = `https://pixabay.com/api/?key=${key}&q=${term}&image_type=photo&pretty=true`;
     // console.log(url);
     fetch(url)
       .then((response) => response.json())
