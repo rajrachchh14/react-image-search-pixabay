@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-export default function ImageSearch({ searcHook }) {
+export default function ImageSearch({ searchHook }) {
   const [text, setText] = useState();
   const onSubmit = (e) => {
     e.preventDefault();
-    searcHook(text);
+    searchHook(text);
   };
   return (
     <>

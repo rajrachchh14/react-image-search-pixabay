@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <ImageSearch searcHook={(text) => setSearch(text)} />
+      <ImageSearch searchHook={(text) => setSearch(text)} />
       {isLoading ? (
         <h1> Load...</h1>
       ) : (
