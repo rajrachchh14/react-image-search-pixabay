@@ -14,7 +14,7 @@ export default function ImageCard(image) {
         <div className="card" style={{ width: '18rem' }}>
           <img src={photo} className="card-img-top" alt="data" />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
+            {/* <h5 className="card-title">Card title</h5> */}
             <p className="card-text">User : {user}</p>
             <p className="card-text">Downloads : {downloads}</p>
             <span className="badge bg-secondary">{t1}</span> &nbsp;

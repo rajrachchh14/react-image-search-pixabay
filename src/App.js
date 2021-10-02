@@ -9,7 +9,7 @@ export default function App() {
 
   useEffect(() => {
     const key = '23664585-b63ea49e0412f4d30e9b28cc8';
-    const url = `https://pixabay.com/api/?key=${key}&q=${search}&image_type=photo&pretty=true`;
+    const url = `https://pixabay.com/api/?key=${key}&q=${search}&image_type=photo&pretty=true&safesearch=false&per_page=10`;
     // console.log(url);
     fetch(url)
       .then((response) => response.json())
@@ -30,8 +30,13 @@ export default function App() {
   return (
     <>
       <ImageSearch searchHook={(text) => setSearch(text)} />
+
+      {!isLoading && image.length === 0 && (
+        <h1 className="text-center">No Data Found</h1>
+      )}
+
       {isLoading ? (
-        <h1> Load...</h1>
+        <h1 className="text-center"> Loading...</h1>
       ) : (
         <div className="container">
           <div className="row">
